@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 
 import Navbar from "./components/Navbar"
 import People from "./components/People"
@@ -19,6 +20,7 @@ function App() {
           {page === "planets" ? <Planets /> : <People />}
         </div>
       </div>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
 }
